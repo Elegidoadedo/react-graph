@@ -36,12 +36,11 @@ export const ListOfCategories = () => {
   const renderList = (fixed) => (
     <List fixed={fixed}>
       {
-        categories.map( category => <Item key={category.id} ><Category {...category} /></Item>)
+        loading 
+        ? <Item key='loading'><Category cover='https://loading.io/spinners/rolling/index.curve-bars-loading-indicator.gif' /></Item>
+        : categories.map( category => <Item key={category.id} ><Category {...category} /></Item>)
       }
     </List>)
-  if(loading){
-    return <img src='https://loading.io/spinners/rolling/index.curve-bars-loading-indicator.gif' />
-  }
   return (
     <>
       {renderList()}
