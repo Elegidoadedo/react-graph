@@ -3,9 +3,9 @@ import { ListOfPhotocards } from '../containers/listOfPhotocards'
 import { ListOfCategories } from '../components/ListOfCategories'
 
 
-export const Home = () => {
+export const Home = ({id}) => {
   return <>
   <ListOfCategories />
-  <ListOfPhotocards categoryId='2'/>
+  <ListOfPhotocards categoryId={id}/>
 </>
 }

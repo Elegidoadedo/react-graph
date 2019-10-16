@@ -38,7 +38,7 @@ export const ListOfCategories = () => {
       {
         loading 
         ? <Item key='loading'><Category cover='https://loading.io/spinners/rolling/index.curve-bars-loading-indicator.gif' /></Item>
-        : categories.map( category => <Item key={category.id} ><Category {...category} /></Item>)
+        : categories.map( category => <Item key={category.id} ><Category {...category} path={`/pet/${category.id}`} /></Item>)
       }
     </List>)
   return (
