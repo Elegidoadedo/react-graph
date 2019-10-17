@@ -8,6 +8,6 @@ export const NavBar = () => {
   return <Nav>
     <Link to='/'><MdHome size={SIZE} /></Link>
     <Link to='/favs'><MdFavoriteBorder size={SIZE} /></Link>
-    <Link to='/users'><MdPersonOutline size={SIZE} /></Link>
+    <Link to='/user'><MdPersonOutline size={SIZE} /></Link>
   </Nav>
 }
