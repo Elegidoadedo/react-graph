@@ -1,5 +1,5 @@
 import React from 'react'
-import { Photocard } from '../components/Photocard'
+import { PhotoCard } from '../components/Photocard'
 import { gql } from 'apollo-boost'
 import { Query } from 'react-apollo'
 
@@ -20,7 +20,7 @@ const renderProp = ({ loading, error, data }) => {
   if (loading) return <img src='https://loading.io/spinners/rolling/index.curve-bars-loading-indicator.gif' />
   if (error) return {error}
   const { photo = {} } = data;
-  return <Photocard {...photo} />}
+  return <PhotoCard {...photo} />}
 
 export const PhotocardWithQuery = ({ id }) => (
   <Query query={GET_SINGLE_PHOTO} variables= {{ id}}>
